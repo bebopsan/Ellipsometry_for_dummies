@@ -13,7 +13,8 @@ Once you have a working version of python go to a terminal an execute:
 
   python ellipse_app.py
   
-This repository also contains a quick documentation in the form of a poster named "polarization_poster.pdf".
+This repository also contains a quick documentation in the form of a poster named "polarization_poster.pdf". 
+To visualize it  go to "View code" then click on polarization_poster.pdf and select "Open binary file".
 
 Licence
 -------
