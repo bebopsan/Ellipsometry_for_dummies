@@ -3,6 +3,9 @@ Ellipsometry_for_dummies
 
 This repository contains a python application for the visualization of polarization states. 
 
+This repository also contains a quick documentation in the form of a poster named "polarization_poster.pdf". 
+To visualize it  go to "View code" then click on polarization_poster.pdf and select "Open binary file".
+
 To run the application you must have Python 3 installed as well as some mayor packages such as:
 * PyQt4
 * Scipy
@@ -13,8 +16,7 @@ Once you have a working version of python go to a terminal an execute:
 
   python ellipse_app.py
   
-This repository also contains a quick documentation in the form of a poster named "polarization_poster.pdf". 
-To visualize it  go to "View code" then click on polarization_poster.pdf and select "Open binary file".
+
 
 Licence
 -------
