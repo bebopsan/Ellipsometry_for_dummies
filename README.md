@@ -23,7 +23,7 @@ Licence
 
 This project is distributed under the standard MIT Licence, please use this and twist it in whatever fashion you wish - and recommend any cool changes to help the code.
 
-Copyright (C) 2013 Santiago Echeverri Chacón, Nicolás Guarín Zapata, Edward Yesid Villegas Pulgarín.
+Copyright (C) 2013 Santiago Echeverri Chacón.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
