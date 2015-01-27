@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'ellipse_plot.ui'
 #
-# Created: Sun Nov  9 16:03:05 2014
-#      by: PyQt4 UI code generator 4.11.2
+# Created: Tue Jan 27 12:01:51 2015
+#      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -209,8 +209,11 @@ class Ui_MplMainWindow(object):
         self.action_Close.setObjectName(_fromUtf8("action_Close"))
         self.action_About = QtGui.QAction(MplMainWindow)
         self.action_About.setObjectName(_fromUtf8("action_About"))
+        self.action_Documentation = QtGui.QAction(MplMainWindow)
+        self.action_Documentation.setObjectName(_fromUtf8("action_Documentation"))
         self.menu_File.addAction(self.action_Close)
         self.menu_File.addAction(self.action_About)
+        self.menu_File.addAction(self.action_Documentation)
         self.menubar.addAction(self.menu_File.menuAction())
 
         self.retranslateUi(MplMainWindow)
@@ -234,5 +237,6 @@ class Ui_MplMainWindow(object):
         self.action.setText(_translate("MplMainWindow", "About", None))
         self.action_Close.setText(_translate("MplMainWindow", "Close", None))
         self.action_About.setText(_translate("MplMainWindow", "About", None))
+        self.action_Documentation.setText(_translate("MplMainWindow", "Documentation", None))
 
 from mplwidget import MplWidget

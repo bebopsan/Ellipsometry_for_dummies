@@ -32,6 +32,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
         self.setWindowTitle("Ellipsometry for dummies")
         self.action_About.triggered.connect(self.about)
         self.action_Close.triggered.connect(self.fileQuit)
+        self.action_Documentation.triggered.connect(self.get_to_doc)
          # Generate plots in case the button is clicked
         self.generateButton.clicked.connect(self.GeneratePlots)
         self.jonesGroupBox.clicked.connect(self.jonesChecked)
@@ -98,6 +99,12 @@ class MainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
     It may be used and modified with no restriction; raw copies as well as
     modified versions may be distributed without limitation."""
     )
+    def get_to_doc(self):
+        from PyQt4.QtGui import QDesktopServices
+        from PyQt4.QtCore import QUrl
+        url = QUrl()
+        url.setUrl('https://github.com/bebopsan/Ellipsometry_for_dummies.git')
+        QDesktopServices.openUrl(url)
                 
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
