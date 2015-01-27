@@ -29,7 +29,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
     def __init__(self, parent = None ):
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
-        self.setWindowTitle("Ellipsometry for dummies")
+        self.setWindowTitle("Assistant for polarization transformations")
         self.action_About.triggered.connect(self.about)
         self.action_Close.triggered.connect(self.fileQuit)
         self.action_Documentation.triggered.connect(self.get_to_doc)
@@ -87,18 +87,26 @@ class MainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
             
     def about(self):
         QtGui.QMessageBox.about(self, "About",
-    """Platform for plotting polarization ellipses
-    Santiago Echeverri Chacón, 2014
-    Grupo de Óptica Aplicada
-
-    Universidad EAFIT
-    
-    This program was intended for plotting the polarization ellipse of
-    a state of polarization given by an arbitrary Jones vector.
-
-    It may be used and modified with no restriction; raw copies as well as
-    modified versions may be distributed without limitation."""
-    )
+     """
+    <b>PolStaPlot 
+    <br>Polarization State Plotter
+    <br>Platform for plotting and transforming polarization ellipses
+    <p>Copyright &copy; 2013-2015 Universidad EAFIT
+    <br>Licensed under the terms of the MIT License
+    <p>Created by Santiago Echeverri
+    <br>Developed and maintained by the 
+    <a href="http://www.eafit.edu.co/investigacion/grupos/escuela-ciencias-humanidades/optica-aplicada/Paginas/optica-aplicada.aspx#.VMgNycZuZhQ">Applied Optics Group at EAFIT University</a>
+    <p>For further info contact Santiago Echeverri at:
+    <ul><li> sechev14@eafit.edu.co 
+    </li></ul>
+    <p>This program is intended for plotting the polarization ellipse of
+    a state of polarization given by an arbitrary Jones vector. It is also
+    a tool for easily identifying  the correct translation between different
+    representations of polarization states.
+    <br>
+    <p>For details about use and installation please visit the 
+    <a href="https://github.com/bebopsan/Ellipsometry_for_dummies.git">Ellipsometry for Dummies repository</a>.
+    """ )
     def get_to_doc(self):
         from PyQt4.QtGui import QDesktopServices
         from PyQt4.QtCore import QUrl

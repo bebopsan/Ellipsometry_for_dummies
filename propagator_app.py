@@ -29,7 +29,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
     def __init__(self, parent = None ):
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
-        self.setWindowTitle("Polarization stat propagator")
+        self.setWindowTitle("Polarization state propagator")
         self.action_About.triggered.connect(self.about)
         self.action_Close.triggered.connect(self.fileQuit)
         
@@ -145,33 +145,30 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
     def fileQuit(self):
         self.close()
 
-#    def keyPressEvent(self, event):
-#        key = event.key()
-#        modifiers = QtGui.QApplication.keyboardModifiers()
-#        if key == QtCore.Qt.Key_X:
-#            #self.Generate_in_Jones()
-#                
-#            if modifiers == QtCore.Qt.ShiftModifier:
-#                self.M_x2_LineEdit.setFocus
-#            else:
-#                self.M_x1_LineEdit.setFocus
             
     def about(self):
         QtGui.QMessageBox.about(self, "About",
-    """Platform for propagating polarization ellipses through polarizing elements
-    Santiago Echeverri Chacón, 2014
-    Grupo de Óptica Aplicada
-
-    Universidad EAFIT
-    
-    This program was intended for plotting the polarization ellipse of
+    """
+    <b>PolStaPro 
+    <br>Polarization State Propagator
+    <br>Platform for propagating polarization ellipses through polarizing elements
+    <p>Copyright &copy; 2013-2015 Universidad EAFIT
+    <br>Licensed under the terms of the MIT License
+    <p>Created by Santiago Echeverri
+    <br>Developed and maintained by the 
+    <a href="http://www.eafit.edu.co/investigacion/grupos/escuela-ciencias-humanidades/optica-aplicada/Paginas/optica-aplicada.aspx#.VMgNycZuZhQ">Applied Optics Group at EAFIT University</a>
+    <p>For further info contact Santiago Echeverri at:
+    <ul><li> sechev14@eafit.edu.co 
+    </li></ul>
+    <p>This program was intended for plotting the polarization ellipse of
     a state of polarization given by arbitrary direction and ellipticity.
     It also shows the polarization vector and ellipse resulting from the 
     propagation of the latter trough a polarizing or phase retarding optical 
     element. 
-
-    It may be used and modified with no restriction; raw copies as well as
-    modified versions may be distributed without limitation."""
+    <br>
+    <p>For details about use and installation please visit the 
+    <a href="https://github.com/bebopsan/Ellipsometry_for_dummies.git">Ellipsometry for Dummies repository</a>.
+    """    
     )
 
 if __name__ == '__main__':

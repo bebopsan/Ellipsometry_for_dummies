@@ -346,9 +346,9 @@
     <property name="title">
      <string>Menu</string>
     </property>
+    <addaction name="action_Documentation"/>
     <addaction name="action_Close"/>
     <addaction name="action_About"/>
-    <addaction name="action_Documentation"/>
    </widget>
    <addaction name="menu_File"/>
   </widget>
