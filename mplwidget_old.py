@@ -3,24 +3,16 @@
 # Programa simple para aprender a usar qt
 
 import sys
-
-
 import matplotlib
-
-
-matplotlib.use('Qt5Agg')
-from PyQt5 import QtGui, QtWidgets
+matplotlib.use('Qt4Agg')
+from PyQt4 import QtGui
 from polarization_routines import plot_ellipse
 from matplotlib.figure import Figure
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.backends.backend_qt5agg \
-     import NavigationToolbar2QT as NavigationToolbar
-
-
+from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_qt4agg \
+     import NavigationToolbar2QTAgg as NavigationToolbar
 from numpy import pi
 import numpy as np
-
-
 
 __version__ = '1.0'
 
@@ -32,8 +24,6 @@ def rotate(element, theta):
     """
     #Pending to import only the most elevant numpy functions for improving speed
     import numpy as np
-
-
     assert isinstance(element, np.matrix)
     assert element.shape == (2, 2)
     rotator = np.matrix([[np.cos(theta), np.sin(theta)],\
@@ -48,8 +38,6 @@ class MplCanvas(FigureCanvas):
              a linear polarized field alligned with angle polAngle trough
              a qwp aligned along qwpAngle"""
         from matplotlib.pylab import close
-
-
         close('all')
         if isinstance(Jones,np.matrix): 
             fig_1, fig_2 = plot_ellipse(Jones,show=False, retrieve=True)             
@@ -70,25 +58,25 @@ class MplCanvas(FigureCanvas):
         else:
             raise ValueError("Oops!  That was no valid number.  Try again...")
 
-        #self.fig.hold(False)  # Hold has been deprecated?
+        self.fig.hold(False)
         FigureCanvas.__init__(self, self.fig)
         FigureCanvas.setSizePolicy(self,
-                                   QtWidgets.QSizePolicy.Expanding,
-                                   QtWidgets.QSizePolicy.Expanding)
+                                   QtGui.QSizePolicy.Expanding,
+                                   QtGui.QSizePolicy.Expanding)
         FigureCanvas.updateGeometry(self)
         
         
-class MplWidget(QtWidgets.QWidget):
+class MplWidget(QtGui.QWidget):
     """Widget defined in Qt Designer"""
     def __init__(self, parent=None):
         # initialization of Qt MainWindow widget
-        QtWidgets.QWidget.__init__(self, parent)
+        QtGui.QWidget.__init__(self, parent)
         # set the canvas to the Matplotlib widget
         self.canvas_1 = MplCanvas(figure=1)
         self.canvas_2 = MplCanvas(figure=2)
         # create a vertical box layout
         #QSplitter(Qt.Horizontal, self)
-        self.hbl = QtWidgets.QHBoxLayout()
+        self.hbl = QtGui.QHBoxLayout()
         # add mpl widget to vertical box
         self.hbl.addWidget(self.canvas_2, stretch=2)
         self.hbl.addWidget(self.canvas_1, stretch=1)

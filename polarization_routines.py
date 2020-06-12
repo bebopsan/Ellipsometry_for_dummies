@@ -107,7 +107,8 @@ def plot_ellipse( J, name = '', show = True, retrieve = False):
     axes[0].set_ylim(-1, 1)
     axes[0].set_zlim(-1, 1)
      #axes[0].view_init(elev=0, azim=0)
-    axes[0].set_aspect('equal')
+    axisEqual3D(axes[0])
+    #axes[0].set_aspect('equal')
 
     axes[0].set_axis_off()
 
@@ -148,6 +149,15 @@ def plot_ellipse( J, name = '', show = True, retrieve = False):
         return fig,fig2
     else:
         return "done"
+
+def axisEqual3D(ax):
+    extents = np.array([getattr(ax, 'get_{}lim'.format(dim))() for dim in 'xyz'])
+    sz = extents[:,1] - extents[:,0]
+    centers = np.mean(extents, axis=1)
+    maxsize = max(abs(sz))
+    r = maxsize/2
+    for ctr, dim in zip(centers, 'xyz'):
+        getattr(ax, 'set_{}lim'.format(dim))(ctr - r, ctr + r)
 
 def ellipse_gen(x0,phi, theta, give_delta = False, verbose = False,debug =False):
     """" This function is meant to be used in a minimization routine. 

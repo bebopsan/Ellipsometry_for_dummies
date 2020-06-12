@@ -4,14 +4,18 @@
 
 
 from __future__ import with_statement
+
+
 import sys
 import matplotlib
+
+
 matplotlib.use('Qt5Agg')
-from PyQt5 import QtGui, QtCore,QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets
 from ellipse_plot import Ui_MplMainWindow
 from polarization_routines import plot_ellipse, getAnglesFromEllipse, getAnglesFromJones
 from matplotlib.figure import Figure
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 from numpy import pi
 import numpy as np
 
@@ -20,10 +24,10 @@ __version__ = '1.0'
 try:
     _encoding = QtWidgets.QApplication.UnicodeUTF8
     def _translate(context, text, disambig):
-        return QtWidgets.QApplication.translate(context, text, disambig, _encoding)
+        return QtCore.QCoreApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
     def _translate(context, text, disambig):
-        return QtWidgets.QApplication.translate(context, text, disambig)
+        return QtCore.QCoreApplication.translate(context, text, disambig)
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MplMainWindow):
     def __init__(self, parent = None ):
@@ -110,6 +114,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MplMainWindow):
     def get_to_doc(self):
         from PyQt5.QtGui import QDesktopServices
         from PyQt5.QtCore import QUrl
+
+
         url = QUrl()
         url.setUrl('https://github.com/bebopsan/Ellipsometry_for_dummies.git')
         QDesktopServices.openUrl(url)

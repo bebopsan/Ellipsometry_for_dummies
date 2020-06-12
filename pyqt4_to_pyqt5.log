@@ -1,0 +1,51 @@
+**  pyqt4_to_pyqt5.log  Thursday 11. June 2020 16:39  **
+Args: ['pyqt4topyqt5.py', '--diffs', 'ellipse_app.py', '-o', 'ellipse_app2.py']
+
+Processing file: `C:\Users\santiagoe\OneDrive - Mellanox\Documents\Coherent_project\Polarization_controller\Ellipsometry_for_dummies\ellipse_app.py`
+  File updated.
+
+**  pyqt4_to_pyqt5.log  Thursday 11. June 2020 16:44  **
+Args: ['pyqt4topyqt5.py', '--diffs', 'ellipse_plot_old.py', '-o', 'ellipse_plot.py']
+
+Processing file: `C:\Users\santiagoe\OneDrive - Mellanox\Documents\Coherent_project\Polarization_controller\Ellipsometry_for_dummies\ellipse_plot_old.py`
+  File updated.
+
+**  pyqt4_to_pyqt5.log  Thursday 11. June 2020 16:45  **
+Args: ['pyqt4topyqt5.py', '--diffs', 'mplwidget_old.py', '-o', 'mplwidget.py']
+
+Processing file: `C:\Users\santiagoe\OneDrive - Mellanox\Documents\Coherent_project\Polarization_controller\Ellipsometry_for_dummies\mplwidget_old.py`
+  File updated.
+
+**  pyqt4_to_pyqt5.log  Thursday 11. June 2020 16:52  **
+Args: ['pyqt4topyqt5.py', '--diffs', 'ellipse_app_old', '-o', 'ellipse_app.py']
+
+Beginning into: C:\Users\santiagoe\OneDrive - Mellanox\Documents\Coherent_project\Polarization_controller\Ellipsometry_for_dummies\ellipse_app.py
+
+**  pyqt4_to_pyqt5.log  Thursday 11. June 2020 16:52  **
+Args: ['pyqt4topyqt5.py', '--diffs', 'ellipse_app_old', '-o', 'ellipse_app']
+
+Beginning into: C:\Users\santiagoe\OneDrive - Mellanox\Documents\Coherent_project\Polarization_controller\Ellipsometry_for_dummies\ellipse_app
+
+**  pyqt4_to_pyqt5.log  Thursday 11. June 2020 16:53  **
+Args: ['pyqt4topyqt5.py', '--diffs', 'ellipse_app_old', '-o', 'ellipse_app.py']
+
+Beginning into: C:\Users\santiagoe\OneDrive - Mellanox\Documents\Coherent_project\Polarization_controller\Ellipsometry_for_dummies\ellipse_app.py
+
+**  pyqt4_to_pyqt5.log  Thursday 11. June 2020 16:54  **
+Args: ['pyqt4topyqt5.py', '--diffs', 'ellipse_app_old.py', '-o', 'ellipse_app.py']
+
+Processing file: `C:\Users\santiagoe\OneDrive - Mellanox\Documents\Coherent_project\Polarization_controller\Ellipsometry_for_dummies\ellipse_app_old.py`
+  No changes needed.
+
+**  pyqt4_to_pyqt5.log  Thursday 11. June 2020 16:55  **
+Args: ['pyqt4topyqt5.py', '--diffs', 'ellipse_app.py', '-o', 'ellipse_app.py']
+
+Processing file: `C:\Users\santiagoe\OneDrive - Mellanox\Documents\Coherent_project\Polarization_controller\Ellipsometry_for_dummies\ellipse_app.py`
+  File updated.
+
+**  pyqt4_to_pyqt5.log  Thursday 11. June 2020 16:56  **
+Args: ['pyqt4topyqt5.py', '--diffs', 'ellipse_app_old.py', '-o', 'ellipse_app.py']
+
+Processing file: `C:\Users\santiagoe\OneDrive - Mellanox\Documents\Coherent_project\Polarization_controller\Ellipsometry_for_dummies\ellipse_app_old.py`
+  No changes needed.
+
